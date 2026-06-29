@@ -1,0 +1,254 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Pokemon Generator — Free Pokemon Character Creator</title>
+  <meta name="description" content="Create unique Pokemon-style characters with AI. Generate custom Pokemon creatures for free. No signup required.">
+  <meta name="keywords" content="AI Pokemon generator, Pokemon character creator, AI creature generator, free Pokemon maker, AI monster generator">
+  <link rel="canonical" href="https://aipokemongen.com/">
+  <meta property="og:title" content="AI Pokemon Generator — Free Pokemon Character Creator">
+  <meta property="og:description" content="Create unique Pokemon-style characters with AI. Generate custom Pokemon creatures for free.">
+  <meta property="og:url" content="https://aipokemongen.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://aipokemongen.com/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI Pokemon Generator — Free Pokemon Character Creator">
+  <meta name="twitter:description" content="Create unique Pokemon-style characters with AI. No signup required.">
+  <meta name="twitter:image" content="https://aipokemongen.com/og-image.jpg">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "AI Pokemon Generator",
+    "url": "https://aipokemongen.com/",
+    "description": "Create unique Pokemon-style characters with AI. Generate custom Pokemon creatures for free.",
+    "applicationCategory": "GameApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the AI Pokemon Generator?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "AI Pokemon Generator is a free online tool that uses artificial intelligence to create unique Pokemon-style characters. You can generate custom creatures with various types, colors, and features."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is the AI Pokemon Generator free to use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, our AI Pokemon Generator is completely free to use. There is no signup required, no credit card needed, and no usage limits. You can generate as many Pokemon characters as you want."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What Pokemon types are supported?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our generator supports all classic Pokemon types including fire, water, grass, electric, psychic, dark, dragon, and more. You can also enter custom descriptions for unique creature designs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I download the generated Pokemon characters?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely! Once your AI Pokemon character is generated, you can download it directly to your device in high quality. All characters are free for personal use."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need an account to use the AI Pokemon Generator?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No account or signup is required. Simply visit the website, describe your Pokemon, select a type, and generate your character instantly."
+        }
+      }
+    ]
+  }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="shared/base.css">
+  <link rel="stylesheet" href="shared/layout.css">
+  <link rel="stylesheet" href="shared/components.css">
+  <style>
+    .generator-area { background: linear-gradient(135deg, var(--primary-light) 0%, var(--bg-secondary) 100%); }
+    .image-preview { min-height: 320px; }
+    .style-select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23475569' viewBox='0 0 16 16'%3E%3Cpath d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 0.75rem center; padding-right: 2.5rem; appearance: none; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">AI Pokemon Generator</a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero / Generator Section -->
+    <section class="generator-area py-16">
+      <div class="container">
+        <div class="text-center mb-10">
+          <h1 class="text-4xl md:text-5xl font-bold mb-4">AI Pokemon Generator</h1>
+          <p class="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">Create unique Pokemon-style characters instantly. Free, no signup required.</p>
+        </div>
+
+        <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg p-6 md:p-8">
+          <div class="mb-5">
+            <label for="pokemon-desc" class="block text-sm font-semibold mb-2">Describe your Pokemon</label>
+            <input type="text" id="pokemon-desc" class="form-input w-full" placeholder="e.g., a cute fire dragon with wings" value="a cute fire dragon with wings">
+          </div>
+
+          <div class="mb-5">
+            <label for="pokemon-type" class="block text-sm font-semibold mb-2">Pokemon Type</label>
+            <select id="pokemon-type" class="form-input w-full style-select">
+              <option value="fire" selected>Fire</option>
+              <option value="water">Water</option>
+              <option value="grass">Grass</option>
+              <option value="electric">Electric</option>
+              <option value="psychic">Psychic</option>
+              <option value="dark">Dark</option>
+              <option value="dragon">Dragon</option>
+              <option value="ice">Ice</option>
+              <option value="fighting">Fighting</option>
+              <option value="custom">Custom (use description only)</option>
+            </select>
+          </div>
+
+          <button id="generate-btn" class="btn btn-primary w-full text-lg py-3">Generate Pokemon</button>
+
+          <div id="result-area" class="mt-8 hidden">
+            <div class="image-preview rounded-xl bg-[var(--bg-secondary)] flex items-center justify-center overflow-hidden">
+              <img id="generated-image" src="" alt="Generated AI Pokemon character" class="max-w-full h-auto hidden">
+              <div id="loading" class="py-20 text-[var(--text-secondary)]">Generating your Pokemon... <span class="inline-block animate-spin ml-2">⟳</span></div>
+            </div>
+            <div class="mt-4 flex gap-3 justify-center">
+              <a id="download-btn" href="#" download="ai-pokemon.png" class="btn btn-secondary">Download Image</a>
+              <button id="regenerate-btn" class="btn btn-primary">Generate Another</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEO Content -->
+    <section class="py-16 bg-white">
+      <div class="container max-w-4xl">
+        <h2 class="text-3xl font-bold mb-6">What is AI Pokemon Generator?</h2>
+        <p class="mb-4 text-[var(--text-secondary)] leading-relaxed">AI Pokemon Generator is a powerful, free online tool that lets you create unique Pokemon-style characters using artificial intelligence. Whether you are a game developer, artist, or Pokemon fan, our tool generates high-quality creature designs in seconds.</p>
+        <p class="mb-4 text-[var(--text-secondary)] leading-relaxed">The tool supports all classic Pokemon types including fire, water, grass, electric, psychic, dark, dragon, and ice. You can also enter fully custom descriptions to create unique creatures that match your exact vision. All generated characters are free to download and use for personal projects.</p>
+        <p class="mb-4 text-[var(--text-secondary)] leading-relaxed">Using the AI Pokemon Generator is incredibly simple. Describe your creature, select your preferred type from the dropdown menu, and click the generate button. Within seconds, Pollinations AI will create a unique character based on your input. There is no signup required, no API key needed, and no limits on how many characters you can create.</p>
+        <p class="text-[var(--text-secondary)] leading-relaxed">Best of all, the AI Pokemon Generator runs entirely in your browser. Your descriptions are sent directly to Pollinations AI for image generation, and no personal data is stored on our servers. It is fast, private, and completely free. Try it now and see what amazing Pokemon characters you can create!</p>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-[var(--bg-secondary)]">
+      <div class="container max-w-4xl">
+        <h2 class="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+        <div class="space-y-4">
+          <details class="bg-white rounded-lg shadow-sm p-5">
+            <summary class="font-semibold cursor-pointer">What is the AI Pokemon Generator?</summary>
+            <p class="mt-3 text-[var(--text-secondary)]">AI Pokemon Generator is a free online tool that uses artificial intelligence to create unique Pokemon-style characters. You can generate custom creatures with various types, colors, and features.</p>
+          </details>
+          <details class="bg-white rounded-lg shadow-sm p-5">
+            <summary class="font-semibold cursor-pointer">Is the AI Pokemon Generator free to use?</summary>
+            <p class="mt-3 text-[var(--text-secondary)]">Yes, our AI Pokemon Generator is completely free to use. There is no signup required, no credit card needed, and no usage limits. You can generate as many Pokemon characters as you want.</p>
+          </details>
+          <details class="bg-white rounded-lg shadow-sm p-5">
+            <summary class="font-semibold cursor-pointer">What Pokemon types are supported?</summary>
+            <p class="mt-3 text-[var(--text-secondary)]">Our generator supports all classic Pokemon types including fire, water, grass, electric, psychic, dark, dragon, and more. You can also enter custom descriptions for unique creature designs.</p>
+          </details>
+          <details class="bg-white rounded-lg shadow-sm p-5">
+            <summary class="font-semibold cursor-pointer">Can I download the generated Pokemon characters?</summary>
+            <p class="mt-3 text-[var(--text-secondary)]">Absolutely! Once your AI Pokemon character is generated, you can download it directly to your device in high quality. All characters are free for personal use.</p>
+          </details>
+          <details class="bg-white rounded-lg shadow-sm p-5">
+            <summary class="font-semibold cursor-pointer">Do I need an account to use the AI Pokemon Generator?</summary>
+            <p class="mt-3 text-[var(--text-secondary)]">No account or signup is required. Simply visit the website, describe your Pokemon, select a type, and generate your character instantly.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 AI Pokemon Generator. All rights reserved.</p>
+      <nav class="footer-nav">
+        <a href="/about">About</a>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms of Service</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      const generateBtn = document.getElementById('generate-btn');
+      const regenerateBtn = document.getElementById('regenerate-btn');
+      const resultArea = document.getElementById('result-area');
+      const generatedImage = document.getElementById('generated-image');
+      const loading = document.getElementById('loading');
+      const downloadBtn = document.getElementById('download-btn');
+      const descInput = document.getElementById('pokemon-desc');
+      const typeSelect = document.getElementById('pokemon-type');
+
+      function generate() {
+        const desc = descInput.value.trim() || 'a cute fire dragon';
+        const type = typeSelect.value;
+        let prompt = desc;
+        if (type !== 'custom') {
+          prompt = desc + ', ' + type + ' type pokemon, cute monster, cartoon style, white background, high quality, detailed';
+        } else {
+          prompt = desc + ', pokemon style, cute monster, cartoon style, white background, high quality, detailed';
+        }
+        const imageUrl = 'https://image.pollinations.ai/prompt/' + encodeURIComponent(prompt) + '?width=512&height=512&nologo=true&seed=' + Math.floor(Math.random() * 100000);
+
+        resultArea.classList.remove('hidden');
+        generatedImage.classList.add('hidden');
+        loading.classList.remove('hidden');
+        generatedImage.src = imageUrl;
+        generatedImage.onload = function() {
+          loading.classList.add('hidden');
+          generatedImage.classList.remove('hidden');
+          downloadBtn.href = imageUrl;
+        };
+        generatedImage.onerror = function() {
+          loading.textContent = 'Error generating Pokemon. Please try again.';
+        };
+        resultArea.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+
+      generateBtn.addEventListener('click', generate);
+      regenerateBtn.addEventListener('click', generate);
+    })();
+  </script>
+</body>
+</html>
